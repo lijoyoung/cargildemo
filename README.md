@@ -14,7 +14,7 @@ automatically output:
 
 Example:
 ```
-app_server_address 			= http://54.169.122.73:5000
+app_server_address			= http://54.169.122.73:5000
 db_instance_address 		= mydb-rds.cddaja5olpcr.ap-southeast-1.rds.amazonaws.com
 nginx_reverse_proxy_server 	= http://web-elb-360621382.ap-southeast-1.elb.amazonaws.com
 ```
@@ -23,6 +23,8 @@ nginx_reverse_proxy_server 	= http://web-elb-360621382.ap-southeast-1.elb.amazon
 
 - First, log into your AWS console and make a note of your key-pair name. Eg: lijoKeySingapore
 - Then make a note of the path of your private key (eg: ~/.ssh/lijoKeySingapore.pem) in your local computer or vm from where you are running terraform apply. 
+- Make sure your local computer or vm has awscli installed. Run aws configure and enter your secret_key, access_key and default region.
+Note: This template was tested in the Singapore region. To be able to run on other regions, append the corresponding ami in the variables.tf file.
 - That's it. Run it, like so:
 ```
 git clone https://github.com/lijoyoung/cargildemo.git
